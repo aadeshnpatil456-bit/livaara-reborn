@@ -109,37 +109,37 @@ function Hero() {
   return (
     <section id="top" className="relative pt-28 md:pt-32 pb-16 md:pb-24">
       <div className="container-px mx-auto max-w-7xl grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-        <div className="fade-up">
-          <p className="eyebrow mb-6">— 38 Years of Ayurvedic Craft</p>
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl leading-[1.05] text-primary">
+        <div className="fade-up fade-up-1 reveal">
+          <p className="eyebrow mb-6 fade-up fade-up-2">— 38 Years of Ayurvedic Craft</p>
+          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl leading-[1.05] text-primary fade-up fade-up-3">
             Crafted Through{" "}
             <span className="italic text-accent">Generations</span>
           </h1>
-          <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed">
+          <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-md leading-relaxed fade-up fade-up-1 mt-8">
             An Ayurvedic scalp ritual born not in a lab, but in 38 years of living,
             healing practice. Cold-infused. Dosha-aligned. Slow by nature.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9 flex flex-wrap items-center gap-4 fade-up fade-up-2">
             <a
               href="#product"
-              className="inline-flex items-center justify-center px-7 py-3.5 text-xs uppercase tracking-[0.2em] bg-primary text-primary-foreground hover:bg-primary/90 transition-colors rounded-sm"
+              className="inline-flex items-center justify-center px-7 py-3.5 text-xs uppercase tracking-[0.2em] bg-primary text-primary-foreground hover:bg-primary/90 transition-colors rounded-sm hover-scale"
             >
-              Shop Now — ₹599
+              Consult Now
             </a>
             <a
               href="#process"
-              className="inline-flex items-center gap-2 px-2 py-3.5 text-xs uppercase tracking-[0.2em] text-primary border-b border-accent hover:text-accent transition-colors"
+              className="inline-flex items-center gap-2 px-2 py-3.5 text-xs uppercase tracking-[0.2em] text-primary border-b border-accent hover:text-accent transition-colors hover-scale"
             >
               Learn More →
             </a>
           </div>
-          <div className="mt-12 flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          <div className="mt-12 flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-muted-foreground fade-up fade-up-3">
             <div><span className="text-accent">★★★★★</span> 4.9 / 5</div>
             <div>1,000+ Rituals Begun</div>
           </div>
         </div>
-        <div className="relative fade-up">
-          <div className="aspect-[4/5] overflow-hidden rounded-sm bg-muted">
+        <div className="relative fade-up fade-up-3 reveal image-float">
+          <div className="aspect-[4/5] overflow-hidden rounded-sm bg-muted hover-scale">
             <img
               src={heroImg}
               alt="Lomaras Ayurvedic scalp oil with fresh botanicals"
@@ -148,7 +148,7 @@ function Hero() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="hidden md:block absolute -bottom-6 -left-6 bg-background border border-border px-6 py-4 rounded-sm">
+          <div className="hidden md:block absolute -bottom-6 -left-6 bg-background border border-border px-6 py-4 rounded-sm fade-up fade-up-2">
             <p className="eyebrow">Hand-bottled</p>
             <p className="font-serif text-lg text-primary mt-1">100ml amber glass</p>
           </div>
@@ -163,7 +163,6 @@ function Marquee() {
     "No Mineral Oils",
     "No Silicones",
     "Cold-Infused",
-    "Hand-Bottled",
     "7-Day Slow Crafted",
     "Dosha-Aligned",
     "Vaidya-Led",
@@ -183,7 +182,7 @@ function Marquee() {
 
 function Product() {
   const benefits = [
-    "Reduces hair fall in 6 weeks",
+    "Reduces hair fall in 4 weeks",
     "Restores scalp microbiome",
     "Strengthens follicles at root",
     "100% natural, dosha-aligned",
@@ -214,16 +213,16 @@ function Product() {
           <div className="mt-10 flex items-center gap-6 flex-wrap">
             <span className="font-serif text-4xl text-primary">₹599</span>
             <a
-              href="#"
-              className="inline-flex items-center justify-center px-8 py-4 text-xs uppercase tracking-[0.2em] bg-accent text-accent-foreground hover:bg-accent/90 transition-colors rounded-sm"
+              href="https://wa.me/+918511414551"
+              className="inline-flex items-center justify-center px-8 py-4 text-xs uppercase tracking-[0.2em] bg-accent text-accent-foreground hover:bg-accent/90 transition-colors rounded-sm hover-scale"
             >
-              Buy Now — Shop Lomaras™
+              Free Dosha Consult
             </a>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">Free shipping across India · 30-day ritual guarantee</p>
+          <p className="mt-4 text-xs text-muted-foreground fade-up fade-up-3">Free shipping across India · 30-day ritual guarantee</p>
         </div>
-        <div className="order-1 md:order-2">
-          <div className="aspect-square bg-secondary/50 rounded-sm overflow-hidden">
+        <div className="order-1 md:order-2 reveal image-float">
+          <div className="aspect-square bg-secondary/50 rounded-sm overflow-hidden hover-scale">
             <img
               src={bottleImg}
               alt="Lomaras Ayurvedic Scalp Oil bottle"
@@ -250,7 +249,7 @@ function BeforeAfter() {
         <div className="mt-14 grid sm:grid-cols-2 gap-6 md:gap-10">
           {[
             { src: beforeImg, tag: "Before", week: "Week 0", note: "Visible thinning" },
-            { src: afterImg, tag: "After", week: "Week 6", note: "Density restored" },
+            { src: afterImg, tag: "After", week: "Week 4", note: "Density restored" },
           ].map((it) => (
             <div key={it.tag} className="text-left">
               <div className="relative aspect-square overflow-hidden rounded-sm">
@@ -267,7 +266,7 @@ function BeforeAfter() {
           ))}
         </div>
         <p className="mt-10 text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground">
-          Real Customer · 6-Week Ritual · Photos shared with consent
+          Real Customer · 4-Week Ritual · Photos shared with consent
         </p>
       </div>
     </section>
@@ -347,12 +346,12 @@ function Ingredients() {
           {items.map((it) => (
             <div
               key={it.n}
-              className="bg-background p-8 rounded-sm border border-border hover:border-accent transition-colors"
+              className="bg-background p-8 rounded-sm border border-border hover:border-accent transition-colors reveal hover-scale fade-up"
             >
-              <div className="font-serif text-3xl text-accent/70">{it.n}</div>
-              <h3 className="font-serif text-2xl text-primary mt-6">{it.name}</h3>
-              <p className="eyebrow mt-1 normal-case tracking-[0.18em] italic">{it.latin}</p>
-              <p className="mt-5 text-muted-foreground text-sm leading-relaxed">{it.body}</p>
+              <div className="font-serif text-3xl text-accent/70 fade-up-1">{it.n}</div>
+              <h3 className="font-serif text-2xl text-primary mt-6 fade-up-2">{it.name}</h3>
+              <p className="eyebrow mt-1 normal-case tracking-[0.18em] italic fade-up-3">{it.latin}</p>
+              <p className="mt-5 text-muted-foreground text-sm leading-relaxed fade-up">{it.body}</p>
             </div>
           ))}
         </div>
@@ -364,9 +363,8 @@ function Ingredients() {
 function Ritual() {
   const steps = [
     { n: "01", title: "Find your dosha", body: "Three honest questions about your scalp — dry, oily, or reactive." },
-    { n: "02", title: "Warm the bottle", body: "Place in a bowl of warm water for three minutes. Never microwave." },
-    { n: "03", title: "The marma massage", body: "Fingertips only, slow circular motion. Begin at the crown — minimum seven minutes." },
-    { n: "04", title: "Rest & repeat", body: "Forty-five minutes minimum. Overnight is optimal. Two to three times a week." },
+    { n: "02", title: "The marma massage", body: "Fingertips only, slow circular motion. Begin at the crown — minimum seven minutes." },
+    { n: "03", title: "Rest & repeat", body: "Forty-five minutes minimum. Overnight is optimal. Two to three times a week." },
   ];
   return (
     <section id="ritual" className="py-20 md:py-32">
@@ -425,8 +423,8 @@ function Testimonials() {
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-3 gap-6">
-          {reviews.map((r) => (
-            <div key={r.name} className="bg-background p-8 rounded-sm border border-border flex flex-col">
+          {reviews.map((r, i) => (
+            <div key={r.name} className={`bg-background p-8 rounded-sm border border-border flex flex-col reveal fade-up hover-scale ${i === 0 ? 'fade-up-1' : i === 1 ? 'fade-up-2' : 'fade-up-3'}`}>
               <div className="flex items-center justify-between">
                 <span className="text-accent tracking-widest">★★★★★</span>
                 <span className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">{r.type}</span>
@@ -461,13 +459,13 @@ function FinalCTA() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
           <a
             href="#"
-            className="inline-flex items-center justify-center px-9 py-4 text-xs uppercase tracking-[0.2em] bg-primary text-primary-foreground hover:bg-primary/85 transition-colors rounded-sm"
+            className="inline-flex items-center justify-center px-9 py-4 text-xs uppercase tracking-[0.2em] bg-primary text-primary-foreground hover:bg-primary/85 transition-colors rounded-sm hover-scale"
           >
             Shop Lomaras™ — ₹599
           </a>
           <a
-            href="#"
-            className="inline-flex items-center px-2 py-4 text-xs uppercase tracking-[0.2em] text-primary border-b border-primary hover:opacity-70 transition-opacity"
+            href="https://wa.me/+918511414551"
+            className="inline-flex items-center px-2 py-4 text-xs uppercase tracking-[0.2em] text-primary border-b border-primary hover:opacity-70 transition-opacity hover-scale"
           >
             Free Dosha Consult
           </a>
@@ -490,7 +488,7 @@ function Footer() {
         {[
           { title: "Explore", links: ["The Process", "Botanicals", "Products", "Your Ritual"] },
           { title: "Products", links: ["LOMARAS™ Oil", "Root Revive Shampoo", "All Products"] },
-          { title: "Connect", links: ["Instagram", "WhatsApp Consult", "Contact", "Privacy Policy"] },
+{ title: "Connect", links: [<a href="https://www.instagram.com/livaara__?igsh=MWt1YXljMTh1aDlkdg==" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">Instagram</a>, <a href="https://wa.me/+918511414551" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">WhatsApp Consult</a>, "Contact", "Privacy Policy"] },
         ].map((c) => (
           <div key={c.title}>
             <p className="eyebrow mb-5">{c.title}</p>
@@ -508,7 +506,7 @@ function Footer() {
       </div>
       <div className="border-t border-primary-foreground/15">
         <div className="container-px mx-auto max-w-7xl py-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-primary-foreground/60">
-          <p>© 2026 LIVAARA. All rights reserved.</p>
+          <p>© 2025 LIVAARA. All rights reserved.</p>
           <p className="italic">Crafted with intention. Delivered with care.</p>
         </div>
       </div>

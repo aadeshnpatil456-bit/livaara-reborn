@@ -88,11 +88,53 @@
   }
   .container-px { padding-left: 1.5rem; padding-right: 1.5rem; }
   @media (min-width: 768px) { .container-px { padding-left: 3rem; padding-right: 3rem; } }
+  /* Staggered fade-up for hero/product */
   .fade-up {
     animation: fadeUp 0.8s ease-out both;
   }
+  .fade-up-1 { animation-delay: 0.1s; }
+  .fade-up-2 { animation-delay: 0.3s; }
+  .fade-up-3 { animation-delay: 0.5s; }
+  
+  /* Hover scales */
+  .hover-scale {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Subtle image float */
+  .image-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  /* Scroll reveals */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.6s ease-out;
+  }
+  .reveal.animate-in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Original */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, .fade-up, .hover-scale, .reveal, .image-float {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
