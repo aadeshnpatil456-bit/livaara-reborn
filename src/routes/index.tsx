@@ -138,14 +138,14 @@ function Hero() {
             <div>1,000+ Rituals Begun</div>
           </div>
         </div>
-        <div className="relative fade-up fade-up-3 reveal image-float">
+        <div className="relative fade-up fade-up-3">
           <div className="aspect-[4/5] overflow-hidden rounded-sm bg-muted hover-scale">
             <img
               src={heroImg}
               alt="Lomaras Ayurvedic scalp oil with fresh botanicals"
               width={1280}
               height={1600}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover image-float"
             />
           </div>
           <div className="hidden md:block absolute -bottom-6 -left-6 bg-background border border-border px-6 py-4 rounded-sm fade-up fade-up-2">
@@ -168,13 +168,15 @@ function Marquee() {
     "Vaidya-Led",
   ];
   return (
-    <div className="border-y border-border bg-secondary/40">
-      <div className="container-px mx-auto max-w-7xl py-5 flex flex-wrap justify-center gap-x-10 gap-y-2 text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground">
-        {items.map((i) => (
-          <span key={i} className="flex items-center gap-3">
-            <span className="text-accent">✦</span> {i}
-          </span>
-        ))}
+    <div className="border-y border-border bg-secondary/40 overflow-hidden">
+      <div className="marquee-container">
+        <div className="marquee-content">
+          {[...items, ...items].map((i, index) => (
+            <span key={`${i}-${index}`} className="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-muted-foreground whitespace-nowrap px-4 py-5">
+              <span className="text-accent">✦</span> {i}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -221,7 +223,7 @@ function Product() {
           </div>
           <p className="mt-4 text-xs text-muted-foreground fade-up fade-up-3">Free shipping across India · 30-day ritual guarantee</p>
         </div>
-        <div className="order-1 md:order-2 reveal image-float">
+        <div className="order-1 md:order-2">
           <div className="aspect-square bg-secondary/50 rounded-sm overflow-hidden hover-scale">
             <img
               src={bottleImg}
@@ -229,7 +231,7 @@ function Product() {
               width={1024}
               height={1024}
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover image-float"
             />
           </div>
         </div>
